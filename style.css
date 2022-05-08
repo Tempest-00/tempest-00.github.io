@@ -1,0 +1,813 @@
+
+
+
+:root{
+    --clr-pageBack: #01030c;
+    --clr-mainBlue: #222da9;
+    --clr-darkBlue: #041036;
+    --clr-mainGreen: #4ac34f;
+    --clr-darkGreen: #13531c;
+    --clr-lightBlue: #b6d5f8;
+}
+
+body{
+    background-color: var(--clr-pageBack);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    max-width: 100%;
+    min-width: 300px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 2vw;
+
+}
+section {
+    margin-top: 30px;
+    border-bottom: 3px solid var(--clr-mainGreen);
+    border-top:  3px solid var(--clr-mainGreen);;
+    width: 100%;
+    
+}
+button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+.button1 {
+    display: block;
+    margin-top: 3vh;
+    align-self: center;
+    background: linear-gradient(0deg, var(--clr-mainBlue), blue);
+    color: white;
+    padding: 1%;
+    width: 40%;
+    height: 1em;
+    line-height: 1em;
+    font-size: .888em;
+    border-radius: 5px;
+    border: 2px solid var(--clr-lightBlue);
+    text-decoration: none;
+   }
+.button2{
+    width: 60%;
+    height: 1.5em;
+    color: white;
+    background-color: var(--clr-darkGreen);
+    border-radius: 5px;
+    border: 2px solid var(--clr-mainGreen);
+    text-decoration: none;
+}
+.button3{
+    display: block;
+    align-self:flex-end;
+    background-color: #000;
+    color: white;
+    padding: 1%;
+    line-height: 2em;
+    border-radius: 5px;
+    border: 2px solid var(--clr-lightBlue);
+    text-decoration: none;
+}
+.button1:active,
+.button2:active
+.button3:active{
+    background: var(--clr-darkBlue);
+
+}
+
+
+
+nav {
+position:fixed;
+top: 0;
+background: var(--clr-mainBlue);
+height: 12vh;
+width: 100%;
+z-index: 1;
+border-bottom: 2px solid var(--clr-darkBlue);
+}
+nav p{
+margin: 2.8vh 0 0 0;
+left: 14vh;
+width: 50vw;
+position: absolute;
+color: white;
+font-size: 1.9vh;
+font-weight: 600;
+line-height: 2.5vh;
+}
+.menuName{
+position: absolute;
+right: 8vw;
+}
+.header-logo{
+position: relative;
+max-width: 12vh;
+padding: .5vh;
+margin: 0;
+}   
+.logo-link{
+float:left;
+}
+.logo-link:hover{ background: none}
+
+nav ul{
+display:flex;
+justify-content: space-around;
+width: 60vw;
+position: fixed;
+right: 0;
+margin: 0;
+flex-wrap: wrap;
+}
+nav ul li{
+display: inline-block;
+padding-left: 5px;
+}
+nav ul li a{
+color: white;
+text-shadow: 1px 1px 0px black,
+        -1px -1px 0px black,
+        -1px 1px 0px black,
+        1px -1px 0px black;
+font-size: 3vh;
+line-height: 6vh;
+text-transform:capitalize;
+border-radius: 3px;
+padding: 28px 0;
+font-weight: 600;
+}
+nav a:active, nav a:hover {
+background: var(--clr-darkBlue);
+color:white;
+transition: .3s;
+}
+.checkbtn{
+position: absolute;
+right: 0;
+width: 5vw;
+font-size: 30px;
+color: white;
+float:right;
+line-height: 12vh;
+margin-right: 30px;
+cursor: pointer;
+display: none;
+z-index: 6;
+}
+#check{
+display:none;
+}
+
+.langWrap a{
+padding: 0 5px;
+}
+
+@media only screen and (min-width: 1581px){
+
+.header-logo{
+font-size: 30px;
+margin: 0;
+width: 260px;
+} 
+.logo-link{
+margin-left: 10px;
+}
+nav ul{
+padding: 0;
+}
+nav ul li a {
+font-size: .3em;
+height: 100%;
+
+}
+nav p{
+position: absolute;
+top: 0;
+height: 12vh;
+width: 25vw;
+margin: 2vh 0 0 0;
+    font-size: 3vh;
+    line-height: 3.2vh;
+
+}
+}
+@media only screen and (max-width: 1580px){
+
+.checkbtn{
+display:block;
+}
+
+nav ul{
+display: block;
+position:fixed;
+width: 70vw;
+background: var(--clr-darkBlue);
+border-radius: 10px;
+border: 2px solid var(--clr-mainBlue);
+top:12vh;
+left: 100%;
+text-align: center;
+transition: all 0.5s;
+padding: 0;
+}
+nav ul li{
+display: block;
+padding: 20px 0;
+line-height: 15px;
+border-bottom: 1px solid #333;
+
+}
+nav ul li a{
+font-size: 20px;
+}
+nav a:hover,nav a:active{
+background: none;
+color: #32a117;
+}
+#check:checked ~ ul{
+left: 28%;
+}
+}
+@media only screen and (max-width: 480px){
+
+nav ul li{
+line-height: 0px;
+}
+.menuName{
+display: none;
+}
+
+}
+
+    /* Hero Section */
+
+.heroContainer{
+    margin-top: 15vh;
+    width: 100vw;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    background-image: url(images/grout.jpg);
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: multiply;
+        background-size: cover;
+        background-position: center;
+        background-attachment:scroll;
+    padding: 0;
+    width: 100vw;
+    height: 60vw;
+    font-family: 'Lexend Giga', sans-serif;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 2px 2px 2px #000000;
+}
+    .hero h1{
+      font-weight: 600;
+      font-size: 4.44vw;
+      margin: .5vw 2vw;
+      line-height: 4.55vw;
+    } 
+    .hero h2{display: none;}
+    .hero p{
+        margin: 2vw 2vw;
+        font-size: 2vw;
+        font-weight: 300;
+    }
+@media only screen and (orientation: portrait){
+    .hero{
+        min-width: 300px;
+        width: 100vmin;
+        height: 100vmin;
+    }
+    .hero h1{
+        font-size: 7vw;
+        line-height: 7.77vw;
+    }
+    .hero p{
+        font-size: 1em;
+    }
+}
+@media only screen (orientation: landscape) and (min-width: 1024px){
+
+.hero{
+width: 100%;
+max-height: 10em;
+}
+.hero h1{
+display: none;
+}
+.hero h2{
+display: block;
+padding-top: 3vh;
+margin: 0;
+line-height: 1.1em;
+font-weight: 800;
+font-size: .9em;
+}
+.hero p{
+font-size: .6em;
+}
+.button1{
+width: 10em;
+height: 2em;
+font-size: .555em;
+}
+}
+/* Services Section */
+
+.services {
+background-color: aliceblue;
+height: 100vmin;
+width: 100vmin;
+display: inline-grid;
+grid-template-columns: 50vmin 50vmin;
+grid-template-rows: 50vmin 50vmin;
+font-family: 'Lexend Giga', sans-serif;
+border: 5px 5px 5px black;
+}
+
+.servBlock {
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 6vw;
+text-decoration: none;
+text-shadow: 2px 2px 2px #000000;
+text-align: center;
+background-color: #000;
+background-color: rgba(0, 0, 0, 0.5);
+background-blend-mode: multiply;
+background-size: cover;
+background-position: center;
+}
+
+.s1{background-image: url(images/CLEANED\ KITCHEN.jpg);}
+.s2{background-image: url(images/officeClean.jpeg);}
+.s3{background-image: url(images/tile\ screen\ 3.png);}
+.s4{background-image: url(images/carpet\ cleaning.jpg);}
+
+@media only screen and (orientation: landscape){
+
+.services{
+display: inline-grid;
+grid-template-columns: 25vw 25vw 25vw 25vw;
+grid-template-rows: 25vw;
+width: 100%;
+height: 25vw;
+}    
+.servBlock{
+font-size: 3vw;
+}
+
+}
+
+
+                     /* Message Card Section, I know its a bad tag*/
+.contact{
+    border: none;
+}
+.cContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cHeader {
+    margin: 10px 10px 10px 10px;
+    padding: 5vmin;
+    background-color: var(--clr-mainGreen);
+    font-size: 4.44vw;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    border-radius: 10px;
+}
+.cBlockContainer{
+}
+.cBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5vw;
+    font-size: 5.55vw;
+    font-weight: 700;
+    line-height: 7vw;
+    width: 80vmin;
+    height: 50vmin;
+    margin: 5vw;
+    background: var(--clr-mainBlue);
+   /* background: linear-gradient(0deg, var(--clr-lightBlue), #5a82cf); */
+    text-shadow: 2px 2px 3px black;
+    color: white;
+    border: 5px groove var(--clr-mainGreen);
+    border-radius: 5px;
+    -moz-box-shadow:     0 0.5vw 2vw #000000;
+    -webkit-box-shadow:  0 0.5vw 2vw #000000;
+    box-shadow:          0 0.5vw 2vw #000000;
+}
+.cBlock img{
+    border-radius: 25px;
+    width: 20vw;
+    padding: 3vh;
+}
+
+@media only screen and (orientation: landscape){
+
+.cBlockContainer{
+display: inline-grid;
+width: 100%;
+margin: 0;
+align-self: center;
+grid-template-columns: 30% 30% 30%;
+grid-template-rows: 50%;
+}
+.cHeader{
+font-size: .5em;
+}
+.cBlock{
+font-size: 2vw;
+line-height: 2.22vw;
+padding: 2vw;
+width: 78%;
+height: 100%;
+}
+.cBlock img{
+padding: 2vw;
+width: 30%;
+}
+.cBlockCall {
+position: relative;
+right: 0;
+width: 70%;
+margin: 0 0 5vh 0;
+font-size: .7em;
+line-height: 1.4em;
+}
+}
+
+
+                /* Booking Form Section */
+.booking{
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 3.33vh;
+border: none;
+}
+.booking input[type=text],
+.booking input[type=number],
+.booking textarea{
+width: 80vw;
+margin: 2vh 0 2vh 0;
+line-height: 1em;
+font-family: inherit;
+font-size: .777em;
+padding: 1vh 2vw 2vh 5vw;
+border: none;
+border-radius: 2vh;
+background-color: aliceblue;
+resize: none;
+}
+
+.booking input[type=text]:focus,
+.booking input[type=number]:focus,
+.booking textarea:focus{
+outline: none;
+border: 2px solid black;
+background-color: white;
+}
+.booking input{
+margin: 5px;
+}
+
+.booking p{
+margin: 3vh 0px 1vh 0px;
+}
+.bFormContainer{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 95vw;
+}
+.bForm{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 10px;
+border-radius: 10px;
+width: 90vw;
+background-color: var(--clr-mainGreen);
+    font-weight: 700;
+}
+.bFormTitle{
+width: 100%;
+text-align: center;
+padding: 2%;
+color: white;
+background-color: var(--clr-darkGreen);
+}
+.bFormCheckboxes {
+display: flex;
+flex-direction: column;
+width: 80vw;
+font-weight: 500;
+font-size: 3.5vh;
+padding: 3vh 0 5vh 5vw;
+}
+.checkbox1{
+display: block;
+padding-left: 5vh;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 3.5vh;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+position: relative;
+}
+.checkbox1 input{
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+position: absolute;
+}
+.checkmark{
+top: 0px;
+left: 0;
+height: 3vh;
+width: 3vh;
+background-color: #eee;
+position: absolute;
+border-radius: 5px;
+}
+.checkbox1:hover input ~ .checkmark {
+background-color: #ccc;
+}
+.checkbox1 input:checked ~ .checkmark {
+background-color: var(--clr-mainBlue);
+}
+.checkmark::after{
+content: "";
+position: absolute;
+display: none;
+}
+.checkbox1 input:checked ~ .checkmark::after {
+display: block;
+}
+.checkbox1 .checkmark::after{
+top: 0px;
+width: 1vh;
+height: 2vh;
+border: solid white;
+transform: rotate(45deg);
+border-width: 0 0.7vh 0.7vh 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+left: 9px;
+}
+@media only screen and (orientation: landscape){
+
+.booking{}
+
+.booking input[type=text],
+.booking input[type=number],
+.booking textarea{
+width: 75%;
+}
+
+.bFormContainer{
+  width: 50%;
+}
+.bForm{
+width: 100%;
+}
+.bFormCheckboxes{
+width: 100%;
+}
+
+}
+
+
+/*Services Expanded Section*/
+
+
+#servExpanded h1{
+color: white;
+background-color: var(--clr-darkBlue);
+padding: 10px;
+border: 5px solid var(--clr-mainBlue);
+border-radius: 5px;
+text-align: center;
+width: 60%;
+margin: 4vh auto;
+
+}
+.servExpandedContainer{
+text-align: center;
+display: flex;
+flex-direction: column;
+margin: 0;
+width: 100vw;
+background-color: var(--clr-darkBlue);
+background-image: url(images/close-up-off-the-ground-from-a-birds-eye-view-the-ground-is-covered-AJMY9C.jpg);
+background-blend-mode: multiply;
+background-size: fill;
+background-attachment: fixed;
+color: white;
+}
+.servExpandedContainer button{
+font-family: "Merriweather", sans-serif;
+}
+.servExpandedContainer ol {
+text-align: start;
+}
+.servExpandedContainer h2{
+display: flex;
+text-align: center;
+align-items: center;
+justify-content: center;
+height: 18vh;
+border-radius: 5px;
+padding: 10px;
+color: var(--clr-mainBlue);
+text-shadow: 2px 2px 0px white,
+-2px -2px 0px white,
+-2px 2px 0px white,
+2px -2px 0px white;
+border: 3px groove var(--clr-mainGreen);        
+}
+.servExpandedContainer button{
+width: 50vw;
+padding: 1.11vh;
+font-family: 'Montserrat', sans-serif;
+font-size: 3.33vh;
+color: white;
+background: linear-gradient(0deg, var(--clr-mainBlue), blue);
+border-radius: 5px;
+}
+
+.tileExp, 
+.carpetExp,
+.houseExp,
+.officeExp{
+border-radius: 10px;
+background-color: var(--clr-darkGreen);
+padding: 5vw;
+margin: 5vw;
+font-weight: 500;
+border: 5px solid var(--clr-mainGreen);
+}
+.tileExp h2 {background: url(images/grout.jpg);
+background-size: cover;
+background-position: center;
+background-attachment:scroll;
+}
+.carpetExp h2{background: url(images/carpet\ cleaning.jpg);
+background-size: cover;
+background-position: center;
+background-attachment:scroll;
+}
+.houseExp h2{background: url(images/CLEANED\ KITCHEN.jpg);
+background-size: cover;
+background-position: center;
+background-attachment:scroll;
+}
+.officeExp h2{background: url(images/tarpclean.jpeg);
+background-size: cover;
+background-position: center;
+background-attachment:scroll;
+}
+
+@media only screen and (orientation: landscape){
+
+.servExpandedContainer{
+flex-flow: row wrap;
+}
+#servExpanded h1{
+width: 50%;
+font-size: 1em;
+}
+.tileExp, 
+.carpetExp,
+.houseExp,
+.officeExp{
+    width: 30%;
+    font-size: 2.22vw;
+    margin: 4vw;
+}
+.servExpandedContainer button{
+max-width: 100%;
+}
+
+}
+
+/* About Section */
+
+.about{
+width: 100%; 
+}
+.aboutContainer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family: inherit;
+font-size: 5vw;
+font-weight: 400;
+background: linear-gradient(
+180deg, rgb(8, 5, 151), var(--clr-lightBlue) 30%)
+
+}
+.aboutHero{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+color: white;
+}
+.aboutContent{
+color: var(--clr-darkBlue);
+max-width: 100%;
+padding: 30px 30px;
+
+}
+.aboutHero img{
+margin: 0;
+width: 70%;
+}
+@media screen and (orientation: landscape){
+    .aboutHero{
+    display: none;
+    }
+    
+    .aboutLogo{
+    max-width: 40%;
+    }
+    .aboutHero h2{
+    position: relative;
+    top: 0;
+    }
+    
+    .aboutContent{
+    font-size: .5em;
+    padding: 0 10%
+    
+    }
+    .aboutContent h4{
+    padding: 0;
+    margin: 0;
+    }
+    }
+    @media screen and (min-width: 1680px){
+    .aboutContent{
+    font-size: .3em;
+    }
+}
+
+/* Footer Section */
+
+.footer{
+
+}
+.footerContainer{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+width: 100vw;
+background-color: black;
+}
+.footerNav a{
+color: white;
+text-decoration: none;
+} .footerNav a:hover{text-decoration: underline;
+}
+.footerNav li {
+padding: 1.11vh 0;
+}
+.footer-icon {
+width: 2em;
+margin: 2.6vh 0;
+}  
+.credits {
+width: 100vw;
+font-size: 0.2vw;
+}
+
+
+
+
