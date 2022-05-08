@@ -622,7 +622,7 @@ flex-direction: column;
 margin: 0;
 width: 100vw;
 background-color: var(--clr-darkBlue);
-background-image: url(images/close-up-off-the-ground-from-a-birds-eye-view-the-ground-is-covered-AJMY9C.jpg);
+/*background-image: url(images/close-up-off-the-ground-from-a-birds-eye-view-the-ground-is-covered-AJMY9C.jpg); */
 background-blend-mode: multiply;
 background-size: fill;
 background-attachment: fixed;
