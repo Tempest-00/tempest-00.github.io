@@ -275,6 +275,7 @@ nav ul li{
   font-size: calc(2em + 3vw);
   color: #fffFFFFF;
   text-shadow: -3px 2px 0px #00000080;
+  padding: 10px;
 }
 
 .banner a{
@@ -282,6 +283,14 @@ nav ul li{
   width: 30vw;
   margin-top: 50px;
   font-size: calc(1rem + 1vw);
+}
+
+@media screen and (max-width: 601px) {
+
+  .banner a{
+    width: 60vw;
+  }
+  
 }
 
 
