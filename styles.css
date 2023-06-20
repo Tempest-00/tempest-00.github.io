@@ -1,0 +1,696 @@
+
+
+:root {
+  --origPurple: #4D3FA1;
+  --clrBase: #fff7d6;
+  --clrMainLight: #E8AA42;
+  --clrMainLight2: #855f1d;
+  --clrMainDark: #362971;
+  --clrAccentDark: #5d47d4;
+  --clrAccentLight: #f5cd82;
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/*  Typography Styles   */
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Wix Madefor Display", sans-serif;
+  background-color: var(--clrBase);
+  font-weight: 800;
+}
+.pageContainer {
+  overflow: auto;
+  top: 0;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* For screens between 601px and 1024px */
+  body {
+    font-size: 16px;
+  }
+
+}
+/* Section Stylers  */
+
+section {
+  border-top: 5px outset white;
+}
+
+.ylwBlock {
+  background-color: var(--clrMainLight);
+  border: 3px solid var(--clrMainLight2);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.blueBlock {
+  background-color: var(--clrAccentDark);
+  border: 3px solid var(--clrMainDark);
+  border-radius: 15px;
+  padding: 10px;
+  color: var(--clrBase);
+}
+
+
+/* Header Section */
+
+header {
+  height: min(15vh, 110px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--clrMainDark);
+  padding: 10px 20px 5px 20px;
+}
+
+.logoC {
+  flex: 0 0 auto;
+}
+.logo {
+  width: 220px;
+}
+
+.header-text {
+  color: #fff;
+}
+
+.header-text h1 {
+  font-family: "IM Fell Great Primer SC", serif;
+  margin: 0;
+  font-size: calc(1rem + 3.9vw);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.quote-info {
+  font-family: "IM Fell Great Primer SC", serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  max-width: 25vw;
+  text-align: center;
+  color: white;
+}
+
+
+@media screen and (max-width: 601px) {
+  
+  header {
+    padding: 0;
+    height: 100px;
+  }
+  .logo {
+    position: relative;
+    bottom: -10px;
+    width: 25vw;
+  }
+  .header-text {
+    width: 50vw;
+  }
+  .header-text h1{
+    font-size: calc(0.2rem + 7.77vw);
+    text-align: center;
+  }
+  .quote-info {
+    width: 25vw;
+    font-size: calc(0.1rem + 2.5vw);
+  }
+
+/*    Nav Section   */
+
+}
+
+nav {
+  background-color: var(--clrMainLight);
+  font-family: "IM Fell Great Primer SC", serif;
+  font-weight: bolder;
+  border: 3px solid var(--clrMainLight2) ;
+}
+.navClose {
+  display: none;
+}
+#navIcon {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 10px 20px;
+  font-size: calc(1rem + 1vh)
+}
+
+nav ul li {
+  margin: 0 10px;
+  padding: 10px 30px;
+  transition: all ease 0.3333s;
+  border-radius: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000000;
+}
+    nav ul li:hover {
+    background-color: var(--clrAccentLight);
+    transform: scale(1.222);
+    box-shadow: 0px 2px 2px 1px #9e7220;
+    }
+
+    nav ul li a:hover {
+    }
+
+@media screen and (max-width: 1024px) {
+
+
+  
+ #navIcon {
+  display: inline;
+  position: fixed;
+  right: -10px;
+  z-index: 0;
+  font-size: 1.333em;
+  color: black;
+  text-decoration: none;
+ }
+
+#nav {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 80%;
+  max-width: 500px;
+  z-index: 2;
+}
+ #nav:not(:target) {
+  right: -100%;
+  transition: right 1s;
+ }
+ #nav:target {
+  right: 0;
+  transition: right 0.5s;
+ }
+ .navClose {
+  display: block;
+ }
+
+
+
+nav ul{
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+nav ul li{
+  width: 40vw;
+  padding: 10px 0;
+}
+
+}
+
+
+
+/*  Hero Section  */
+
+.banner {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  animation: gradient-animation 10s infinite;
+  object-fit: fill;
+  background-color: #23195566;
+  background-blend-mode: multiply;
+}
+
+@keyframes gradient-animation {
+  0% { background-image: url(images/gutter1.jpeg);
+  background-size: cover; }
+  33% { background-image: url(images/gutter1.jpeg);
+  background-size: cover; }
+  35% { background-image: url(images/gutter2.jpeg);
+  background-size: cover; }
+  63% {background-image: url(images/gutter2.jpeg);
+  background-size: cover; }
+  66% { background-image: url(images/aigenereated/powerwashSTO.PNG);
+    background-size: cover; }
+  98% { background-image: url(images/aigenereated/powerwashSTO.PNG);
+    background-size: cover; }
+  100% { background-image: url(images/gutter1.jpeg);
+    background-size: cover; }
+}
+
+.banner h2 {
+  font-family: "IM Fell Great Primer SC", serif;
+  font-size: calc(2em + 3vw);
+  color: #fffFFFFF;
+  text-shadow: -3px 2px 0px #00000080;
+}
+
+.banner a{
+  font-family: "IM Fell Great Primer SC";
+  width: 30vw;
+  margin-top: 50px;
+  font-size: calc(1rem + 1vw);
+}
+
+
+/*   Circle Services   */
+
+
+.circServC {
+  max-width: 100vw;
+}
+
+.circServ {
+  display: flex;
+  flex-direction: column;
+  color: var(--clrBase);
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(to left,var(--clrMainDark) 0%, var(--clrBase) 15%, var(--clrBase) 85%, var(--clrMainDark) 100%);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.circServHead {
+  background-color: var(--clrMainLight);
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  border: 3px solid var(--clrMainLight2);
+  font-weight: 900;
+  font-family: "IM Fell Great Primer SC", serif; 
+  font-size: 2.5rem;
+
+}
+
+.circServBanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 1024px;
+}
+
+.circServItem {
+  color: var(--clrMainDark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  max-width: 500px;
+  font-size: calc(1rem + .6vw);
+  margin: 20px;
+  transition: all 0.2s ease ;
+  padding: 20px;
+  text-decoration: none;
+}
+.circImage img{
+  width: 20vw;
+  height: 20vw;
+  border-radius: 100%;
+}
+
+.circButton {
+  background-color: var(--clrMainLight);
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.circServItem:hover {
+      border-radius: 15px;
+      background-color: white
+    
+
+}
+
+@media screen and (min-width: 602px) and (max-width: 1024px) {
+
+  .circServHead{
+    font-size: 2rem;
+    max-width: 80vw;
+  }
+  .circServItem {
+    width: 150px;
+    font-size: calc(0.5rem + .6vw);
+    justify-content: space-evenly;
+  }
+
+  .circImage {
+    width: 150px;
+    height: 150px;
+  }
+  .circImage img {
+    width: 100%;
+    height: 100%;
+  }
+
+  
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .circServ {
+    background-color: var(--clrBase);
+    background: none;
+  }
+
+  .circServHead {
+    width: 70vw;
+  }
+  .circServBanner {
+    flex-direction: column;
+  }
+  .circServItem {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 60vw;
+    padding: 30px;
+      border: 5px solid var(--clrMainDark);
+      border-radius: 15px;
+      background-color: white
+    
+  }
+  .circImage img{
+    text-align: center;
+    width: 50vw;
+    height: 50vw;
+  }
+
+}
+
+
+/*    Ad Spot     */
+
+.adSpot {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+      background-image: url(images/aigenereated/roofwash.jpg);
+      background-color: var(--clrAccentDark);
+      background-blend-mode: multiply;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+  padding: 20px;
+}
+
+.adContent {
+  max-width: 60vw;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  background-color: #E8AA42CC;
+  color: var(--clrMainDark);
+  padding: 50px;
+  border-radius: 10px;
+}
+.adContent h2 {
+  background-color: var(--clrMainDark);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid var(--clrAccentDark);
+}
+
+@media screen and (max-width: 1024px){
+  
+  .adContent h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
+
+      /* Services Section */
+      
+ /*
+.container {
+  display: flex;
+  height: 50vh;
+  overflow: hidden;
+}
+.box {
+  flex: 1;
+  border: 1px solid;
+  transform: skew(-25deg);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  }
+  
+  .inner {
+  align-self: center;
+  margin-top: 25%;
+  transform: skew(25deg);
+  text-align: center;
+  font-family: "IM Fell Great Primer SC", serif;
+  text-shadow: 0px 0px 3px black;
+  color: #FFF;
+  font-size: 30px;
+  }
+
+  .box:first-child {
+  margin-left:calc((100% / 12) / -1);
+  }
+  .box:last-child {
+  margin-right:calc((100% / 12) / -1);
+  }
+
+  .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  right: -60%;
+  width: 200%;
+  transform: skew(25deg);
+  background-image: var(--i);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  }
+  .box:hover{
+    transform:scale(1.2) skew(-25deg);
+    z-index: 2  ;
+  }
+  */
+
+                /*  Reviews Section  */
+
+.reviewsC {
+  background: url(images/gdrive/deckdoors.jpg);
+  background-color: var(--clrMainLight2);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: bottom -500px right 20%;
+  color: var(--clrBase);
+  padding: 5vh 0 5vh 0;
+  text-align: center;
+}
+.reviewsText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.reviewsText h2 {
+  font-size: 4rem;
+}
+
+.revImg{
+  background: url(images/angiLogo.png);
+  background-color: #f3dcb099;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 100px;
+}
+
+.revButton {
+  display: inline-block;
+  width: 300px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.revStars {
+  position: relative;
+  top: 85px;
+  left: -30px;
+}
+@media screen and (max-width: 1024px) {
+  .reviewsText h2{
+    font-size: calc(1rem + 4vw);
+  }  
+
+}
+
+          /*    About Section   */
+
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1024px;
+  text-align: center;
+  color: white;
+  padding: 2vh 2vw;
+  margin: auto;
+}
+.aboutC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-direction: row;
+  background-color: var(--clrBase);
+  color: var(--clrAccentDark);
+}
+.aboutMap img{
+  max-width: 44.4vw;
+}
+
+.aboutImgsC {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.abtImg{
+  display: none;
+  margin: 40px 0 40px 0;
+  width: 45vw;
+  height: 200px;
+  background: var(--img);
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutTitle {
+  font-size: 3rem;
+}
+
+.aboutText {
+  padding: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutMap {
+    display: none;
+  }
+  .abtImg {
+    display: block;
+  }
+  
+}
+
+          /*      Footer Section      */
+
+
+.footerC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clrMainDark);
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--clrMainDark);
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 2rem;
+  max-width: 96vw;
+}
+footer ul a{
+  width: 20vw;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footerItem {
+  background-color: var(--clrMainDark);
+  color: var(--clrBase);
+  transition: all 0.333s ease;
+  padding: 10%;
+  line-height: 2rem;
+}
+.footerItem:hover{
+  color: var(--clrMainLight);
+  background-color: var(--clrAccentDark);
+  box-shadow: 5px 0px 2px 1px inset #5d47d4;
+  border-radius: 5px;
+  transform: translate(0, -5px);}
+
+  .footer-social a{
+    color: inherit;
+}
+.social-link {}
+
+.footer-icon {
+width: 4em;
+margin: 2.6em 0;
+}    
+
+
+.yellow-star {
+  color: var(--clrMainLight);
+}
+
+.copyright {
+  background-color: var(--clrMainDark);
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  text-align: center;
+}
+
+
