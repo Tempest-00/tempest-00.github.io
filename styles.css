@@ -61,6 +61,7 @@ section {
   border: 3px solid var(--clrMainLight2);
   border-radius: 15px;
   padding: 10px;
+  text-align: center;
 }
 
 .blueBlock {
@@ -69,6 +70,7 @@ section {
   border-radius: 15px;
   padding: 10px;
   color: var(--clrBase);
+  text-align: center;
 }
 
 
